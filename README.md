@@ -5,7 +5,6 @@ Add collapsible
 - Modify as below
 
 
-
 Design:
 - Headers to be right-aligned similar to what is there currently
 - Boxes to be invisible, but on click, show contents
