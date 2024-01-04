@@ -3,3 +3,6 @@ node_modules
 dist
 dist-ssr
 *.local
+src/unused/.CustomCollapse.css
+src/unused/.CustomCollapse.jsx
+src/unused/.unused_css.css

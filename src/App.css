@@ -4,7 +4,6 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
     position: fixed;
 }
 
@@ -12,12 +11,14 @@ body {
   position: relative;
 }
 
+
 canvas {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1; /* Ensure this is below the buttons z-index */
     pointer-events: none;
+    overflow: hidden;
 }
 
 .App {
@@ -26,7 +27,6 @@ canvas {
     color: white;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
 .title {
@@ -38,26 +38,64 @@ canvas {
     padding-right: 20px;
 }
 
-.list-container {
+
+.accordion-item {
+  border: none;
+  background: transparent;
+  margin-bottom: -1.4rem;
   text-align: right;
   padding-right: 20px;
-  list-style-type: none;
-  line-height: 1.2;
 }
 
-/* Style for each text item */
-.list-container a {
+.accordion-header {
   font-family: 'Times New Roman', serif;
   font-size: calc(1.2em + 3vw);
-  color: white; /* Default text color */
-  text-decoration: none; /* Removes underline from links */
-  margin-bottom: 25px; /* Adjust padding to your preference */
+  text-decoration: none;
+  margin-bottom: 0;
+
+  display: inline-block;
+  text-align: right;
+  background: transparent;
+  border: none;
+  color: white;
   cursor: pointer;
-  transition: color 0.3s; /* Smooth transition for hover effect */
-  padding: 10px 0;
+  padding: 1rem 0;
+  width: fit-content;
+
+  transition: color 0.3s;
+  /*transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 
-/* Hover effect for text */
-.list-container a:hover {
-  color: #0056b3; /* Color changes when hovered */
+.accordion-header:hover {
+  color: #0f4d92 /* Color changes when hovered */
+}
+
+.accordion-content {
+  padding: 0rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  position: relative; /* Required for absolute positioning of pseudo-element */
+  overflow: hidden;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Adjust based on exact placement */
+  right: 0;
+  width: 0%;
+  border-top: solid 1px white;
+  transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1); /* Sync with height transition */
+}
+
+.accordion-content.open::before {
+  width: 100%;
+}
+
+.accordion-content.closed::before {
+  width: 0%;
 }
