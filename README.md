@@ -1,14 +1,7 @@
-Todo:
+# Portfolio Site
 
-Add collapsible
-- Find a good react library for it
-- Modify as below
+This is my portfolio site, detailing (some) of the projects I have worked on and my contact detail
 
+The site is *heavily* inspired by Porter Robinson's Nurture — I lean heavily into the random lines and Times New Roman. However, all the coding was done by me. 
 
-Design:
-- Headers to be right-aligned similar to what is there currently
-- Boxes to be invisible, but on click, show contents
-- Contents to be left aligned
-
-- Maybe add a nice right-left line animation to go above and below box?
-(that is, above header of expanded box and underneath content)
+GPL Licence.
