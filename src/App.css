@@ -121,7 +121,7 @@ canvas {
 .link {
   position: relative;
   color: white;
-  font-size: calc(0.24vw + 1rem);
+  font-size: calc(0.3vw + 1rem);
   text-decoration: none; 
 }
 
